@@ -22,6 +22,11 @@ body {
 
 .header-logo {
     margin-left: 4.8vw;
+    transition: opacity 0.5s;
+}
+
+#menu__toggle {
+    display: none;
 }
 
 .menu {
@@ -30,16 +35,38 @@ body {
 }
 
 .menu__item {
+    position: relative;
     margin-right: 1.4vw;
     font-size: 0.9vw;
+    text-decoration: none;
+    color: #2E1449;
+    transition: opacity 0.5s;
+}
+
+.menu__item::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: #7400E8;
+    opacity: 0;
+    transition: opacity 0.5s, width 0.5s;
 }
 
 .menu__icon {
     margin-right: 1.2vw;
+    transition: opacity 0.5s;
 }
 
 .menu__icon:last-child {
     margin-right: 0;
+}
+
+.menu__item:hover::after {
+    opacity: 1;
+    width: 100%;
 }
 
 .main {
@@ -50,7 +77,7 @@ body {
 }
 
 .description {
-    margin: 13.3vw 15vw 0 13.2vw;
+    margin: 13.1vw 15vw 0 13.3vw;
     width: 30.8vw;
     height: max-content;
 }
@@ -76,9 +103,11 @@ body {
 }
 
 .props {
+    display: flex;
+    flex-direction: column;
     width: 20.8vw;
     height: max-content;
-    margin: 16vw 0 0 0;
+    margin: 15.8vw 0 0 0;
 }
 
 .props__title {
@@ -133,6 +162,14 @@ body {
     border: none;
     background-color: #7400E8;
     margin-bottom: 0.9vw;
+    transition: opacity 0.5s;
+}
+
+.header-logo:hover,
+.menu__item:hover,
+.menu__icon:hover,
+.form__button:hover {
+    opacity: 0.7;
 }
 
 .props__text {
@@ -148,4 +185,79 @@ body {
     height: 1.2vw;
     width: 100%;
     background-color: #7400E8;
+}
+
+@media (max-width: 1500px) {
+    .header {
+        padding: 3vw 0;
+        width: 77%;
+    }
+
+    .header-logo {
+        margin-left: 0.1vw;
+    }
+
+    .menu__item {
+        margin-right: 1.9vw;
+        font-size: 1vw;
+    }
+
+    .menu__icon {
+        margin-right: 1.7vw;
+        padding-top: 0.2vw;
+    }
+
+    .menu__icon:last-child {
+        margin-right: 0.1vw;
+    }
+
+    .menu__icon > img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .main {
+        background: right bottom / 58.7vw 41.7vw no-repeat url(./img/1366Vector.svg),
+                    right bottom / 46.7vw 18.6vw no-repeat url(./img/1366Vector-2.svg);
+    }
+
+    .description {
+        margin: 10.4vw 14.8vw 0 16.2vw;
+    }
+
+    .description__title {
+        font-size: 3.2vw;
+        line-height: 3.85vw;
+        letter-spacing: 0.2px;
+        margin-bottom: 1.7vw;
+    }
+
+    .description__text {
+        margin-left: 0;
+        letter-spacing: 0.17px;
+    }
+
+    .props {
+        margin: 12.7vw 0 0 0;
+        width: 21.95vw;
+    }
+
+    .props__title {
+        font-size: 1.3vw;
+        letter-spacing: 0.9px;
+    }
+
+    .form__input {
+        height: 2.8vw;
+        margin-bottom: 0.85vw;
+        letter-spacing: -0.9px;
+    }
+
+    .form__button {
+        height: 2.9vw;
+    }
+
+    .props__text {
+        font-size: 0.88vw;
+    }
 }
