@@ -77,10 +77,10 @@ body {
 }
 
 .main {
-    padding-bottom: 10vw;
+    padding-bottom: 16.55vw;
     display: flex;
     width: 100%;
-    background: right bottom / 60.3vw 39.7vw no-repeat url(./img/Vector-4.png),
+    background: right bottom / 60.3vw 40vw no-repeat url(./img/Vector-4.png),
                 right bottom / 52.5vw 33.5vw no-repeat url(./img/Vector-3.png);
 }
 
@@ -214,6 +214,7 @@ body {
     }
 
     .main {
+        padding-bottom: 16.85vw;
         background: right top / 58.2vw 48.7vw no-repeat url(./img/1366Vector.svg),
                     right top / 46.4vw 71.9vw no-repeat url(./img/1366Vector-2.svg);
     }
@@ -292,6 +293,7 @@ body {
     }
 
     .main {
+        padding-bottom: 22.7vw;
         background: right top / 61vw 65.2vw no-repeat url(./img/1024Vector.svg),
                     right top / 51vw 72.5vw no-repeat url(./img/1024Vector-2.svg);
     }
